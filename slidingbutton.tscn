@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/buttonicons/slider_button.png" type="Texture" id=1]
+[ext_resource path="res://assets/buttonicons/slider_base.png" type="Texture" id=2]
+[ext_resource path="res://slidingbutton.gd" type="Script" id=3]
+
+[node name="TextureButton" type="TextureButton"]
+anchor_left = 0.086
+anchor_top = 0.061
+anchor_right = 0.197
+anchor_bottom = 0.113
+margin_left = -0.200001
+margin_top = 0.0999947
+margin_right = 69.1
+margin_bottom = 17.3
+rect_min_size = Vector2( 147, 64 )
+rect_scale = Vector2( 0.530648, 0.732354 )
+mouse_default_cursor_shape = 2
+script = ExtResource( 3 )
+
+[node name="SliderBase" type="TextureRect" parent="."]
+anchor_top = 0.108
+anchor_right = 1.013
+anchor_bottom = 0.97
+margin_left = -1.88448
+margin_top = 0.0199189
+margin_right = 18.9765
+margin_bottom = 3.56091
+rect_scale = Vector2( 0.904982, 0.902976 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="SliderButton" type="TextureRect" parent="."]
+modulate = Color( 0.572549, 0.572549, 0.572549, 1 )
+anchor_left = 0.528
+anchor_top = 0.043
+anchor_right = 1.011
+anchor_bottom = 0.98
+margin_left = -0.351967
+margin_top = -0.0210736
+margin_right = -0.352966
+margin_bottom = 0.0109253
+mouse_filter = 2
+texture = ExtResource( 1 )
+expand = true
+
+[connection signal="pressed" from="." to="." method="_on_TextureButton_pressed"]

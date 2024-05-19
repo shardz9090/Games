@@ -1,0 +1,137 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://gamescene.gd" type="Script" id=1]
+[ext_resource path="res://pressingbutton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/buttonicons/house.png" type="Texture" id=3]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://tres_files/settings_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/gameover.wav" type="AudioStream" id=6]
+[ext_resource path="res://placeholder.tscn" type="PackedScene" id=7]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 1
+border_width_right = 2
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 1
+border_width_right = 2
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 0.996031, 0.999228 )
+script = ExtResource( 1 )
+button_scene = ExtResource( 2 )
+placeholder_scene = ExtResource( 7 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 650.0
+margin_bottom = 900.0
+custom_constants/separation = 50
+
+[node name="score_and_progress" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 60.0
+
+[node name="score" type="Label" parent="MarginContainer/VBoxContainer/score_and_progress"]
+margin_right = 600.0
+margin_bottom = 46.0
+custom_fonts/font = ExtResource( 5 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/score_and_progress"]
+material = SubResource( 1 )
+margin_top = 50.0
+margin_right = 600.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 10 )
+mouse_filter = 2
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+percent_visible = false
+
+[node name="spawn_area" type="Panel" parent="MarginContainer/VBoxContainer"]
+margin_top = 110.0
+margin_right = 600.0
+margin_bottom = 810.0
+rect_min_size = Vector2( 0, 700 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/spawn_area"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 100, 100 )
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 10
+
+[node name="back_button" type="TextureButton" parent="."]
+anchor_left = 0.093
+anchor_top = 0.09
+anchor_right = 0.093
+anchor_bottom = 0.09
+margin_left = -31.969
+margin_top = -31.0
+margin_right = 8.03101
+margin_bottom = 9.0
+rect_scale = Vector2( 1.58924, 1.55083 )
+mouse_default_cursor_shape = 2
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="back_button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -18.6594
+margin_right = 20.0
+margin_bottom = 21.3406
+rect_scale = Vector2( 0.971698, 0.954649 )
+mouse_filter = 2
+texture = ExtResource( 3 )
+expand = true
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/score_and_progress/ProgressBar" to="." method="_on_ProgressBar_value_changed"]
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
