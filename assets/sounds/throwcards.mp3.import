@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/throwcards.mp3-d148ed738e7fa356535dc75f5c458349.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/throwcards.mp3"
+dest_files=[ "res://.import/throwcards.mp3-d148ed738e7fa356535dc75f5c458349.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
