@@ -1,0 +1,203 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/scenes/components/minicomponents/team_details.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/tres_folder/download_num_text.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/fonts/Roboto-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/fonts/Roboto-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/tres_folder/regular_fonts.tres" type="DynamicFont" id=5]
+[ext_resource path="res://src/scripts/page/sixth_page.gd" type="Script" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="SixPage" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.198
+margin_bottom = 0.159912
+rect_min_size = Vector2( 0, 1080 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 6 )
+member_details = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 1304.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 80
+custom_constants/margin_top = 100
+custom_constants/margin_left = 70
+custom_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 70.0
+margin_top = 100.0
+margin_right = 1200.0
+margin_bottom = 1274.0
+custom_constants/separation = 100
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 1130.0
+margin_bottom = 374.0
+custom_constants/separation = 35
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+margin_right = 1130.0
+margin_bottom = 57.0
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 394.0
+margin_right = 608.0
+margin_bottom = 57.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Teslatech"
+align = 1
+
+[node name="ColorLabel" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 612.0
+margin_right = 736.0
+margin_bottom = 57.0
+custom_colors/font_color = Color( 0.894118, 0.0627451, 0.784314, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Team"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+margin_top = 92.0
+margin_right = 1130.0
+margin_bottom = 128.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Words from our founder"
+align = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+margin_top = 163.0
+margin_right = 1130.0
+margin_bottom = 280.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "When we think about our advancement as a civilization; when we think in terms of yield, productivity and
+efficiency; when we think about our future and the pathways we must create; we realize we all have our
+parts to play and no matter the circumstances, we must each strive towards the greatest goal – fulfilling
+one’s true potential. In this regard, Teslatech is a team of believers – woven together by moral fibre – who
+fight everyday to better the world we live in. "
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+margin_top = 315.0
+margin_right = 1130.0
+margin_bottom = 374.0
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer"]
+margin_right = 1130.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Sujan Shakya"
+align = 1
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer"]
+margin_top = 37.0
+margin_right = 1130.0
+margin_bottom = 59.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Founder and ceo"
+align = 1
+uppercase = true
+
+[node name="TeamGridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 474.0
+margin_right = 1130.0
+margin_bottom = 474.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 50
+custom_constants/hseparation = 50
+columns = 6
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 574.0
+margin_right = 1130.0
+margin_bottom = 1174.0
+rect_min_size = Vector2( 0, 600 )
+custom_constants/separation = 75
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+margin_right = 1130.0
+margin_bottom = 57.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Gallery"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+margin_top = 132.0
+margin_right = 1130.0
+margin_bottom = 532.0
+rect_min_size = Vector2( 1130, 400 )
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 11.0
+margin_right = 311.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 300, 0 )
+custom_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 195.0
+rect_min_size = Vector2( 0, 195 )
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 205.0
+margin_right = 300.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 0, 195 )
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 315.0
+margin_right = 815.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 500, 0 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 819.0
+margin_right = 1119.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 300, 0 )
+custom_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer2"]
+margin_right = 300.0
+margin_bottom = 195.0
+rect_min_size = Vector2( 0, 195 )
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/VBoxContainer2/HBoxContainer/VBoxContainer2"]
+margin_top = 205.0
+margin_right = 300.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 0, 195 )

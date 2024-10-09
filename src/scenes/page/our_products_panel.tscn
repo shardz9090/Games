@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/tres_folder/download_num_text.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/scenes/components/minicomponents/game_descriptions.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/scripts/page/second_page.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+[sub_resource type="Shader" id=2]
+code = "shader_type canvas_item;
+
+const vec4 original_label_color = vec4(0.89,0.06,0.78,1);
+const vec4 target_label_color = vec4(0.43,0.03,0.38,1);
+
+
+void fragment(){
+	vec4 label_color = texture(TEXTURE, UV);
+	if (label_color.a > 0.0){
+		label_color.a = smoothstep(0.0,1.0,UV.x);
+		COLOR.a = label_color.a;
+//		float r_length = original_label_color.r - target_label_color.r;
+//		label_color.a = smoothstep(0.0, 1.0, UV.x);
+//		COLOR = label_color;
+	}
+	else{
+		discard;
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+
+[node name="SecondPage" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.218
+margin_bottom = -0.440063
+rect_min_size = Vector2( 1280, 1315 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+game_description = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 1315.0
+mouse_filter = 1
+custom_constants/margin_top = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_top = 100.0
+margin_right = 1280.0
+margin_bottom = 1315.0
+custom_constants/separation = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 57.0
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 501.0
+margin_right = 579.0
+margin_bottom = 57.0
+custom_fonts/font = ExtResource( 1 )
+text = "Our"
+align = 1
+
+[node name="ShaderLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+material = SubResource( 3 )
+margin_left = 583.0
+margin_right = 779.0
+margin_bottom = 57.0
+custom_colors/font_color = Color( 0.894118, 0.0627451, 0.784314, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Products"
+align = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 157.0
+margin_right = 1280.0
+margin_bottom = 232.0
+mouse_filter = 1
+custom_constants/margin_right = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+margin_left = 100.0
+margin_right = 1180.0
+grow_vertical = 0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2

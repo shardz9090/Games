@@ -1,0 +1,140 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/tres_folder/download_num_text.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/fonts/Roboto-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/images/try-harder.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/mission.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/vision.png" type="Texture" id=5]
+[ext_resource path="res://assets/tres_folder/regular_fonts.tres" type="DynamicFont" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="FourthPage" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.222
+margin_bottom = 0.239868
+rect_min_size = Vector2( 1280, 1320 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 1330.0
+mouse_filter = 1
+custom_constants/margin_top = 100
+custom_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_top = 100.0
+margin_right = 1280.0
+margin_bottom = 1230.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 1280.0
+margin_bottom = 57.0
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 545.0
+margin_right = 674.0
+margin_bottom = 57.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "About"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 678.0
+margin_right = 735.0
+margin_bottom = 57.0
+custom_colors/font_color = Color( 0.894118, 0.0627451, 0.784314, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Us"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 107.0
+margin_right = 1280.0
+margin_bottom = 170.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Riding on the wave of success of the world leading online card game – Callbreak, Teslatech is at her 
+core, a globally competitive tech company fueled by a fierce ambition and at a unique position to 
+contribute to the advancement of technology and thus our society."
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 220.0
+margin_right = 1280.0
+margin_bottom = 617.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 638.0
+margin_bottom = 397.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_right = 638.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 0, 300 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 304.0
+margin_right = 638.0
+margin_bottom = 373.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "To create a gritty team of superheroes who are on the
+forefront of sophistication and can herald a new wave of
+progress where our technology elevates our humanity."
+align = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 642.0
+margin_right = 1280.0
+margin_bottom = 397.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+margin_right = 638.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 0, 300 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+margin_top = 304.0
+margin_right = 638.0
+margin_bottom = 397.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "To be the world leader in online card games
+To leverage our brand position for social impact
+To channel our resources, expertise and spirit towards
+uplifting Nepal’s tech ecosystem"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+margin_top = 667.0
+margin_right = 1280.0
+margin_bottom = 1130.0
+texture = ExtResource( 3 )
+stretch_mode = 6

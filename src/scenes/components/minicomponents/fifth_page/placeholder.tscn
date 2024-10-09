@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 0.336
+anchor_bottom = 0.267
+margin_right = -0.0800171
+margin_bottom = -0.360016
+rect_min_size = Vector2( 430, 288 )
