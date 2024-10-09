@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/scenes/components/minicomponents/fifth_page/placeholder.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scenes/components/minicomponents/fifth_page/achieve_date.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/scripts/components/minicomponents/fifth_page/h_box_for_fifth_page.gd" type="Script" id=3]
+[ext_resource path="res://src/scenes/components/minicomponents/fifth_page/divider.tscn" type="PackedScene" id=4]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchor_right = 0.694
+anchor_bottom = 0.267
+margin_right = -848.32
+margin_bottom = -248.36
+rect_min_size = Vector2( 0, 288 )
+custom_constants/separation = 50
+alignment = 1
+script = ExtResource( 3 )
+achieve_date = ExtResource( 2 )
+placeholder = ExtResource( 1 )
+divider = ExtResource( 4 )

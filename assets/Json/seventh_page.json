@@ -1,0 +1,38 @@
+[
+	{
+		"name": "ChocolatePlatform",
+		"logo": "res://assets/images/logos/partners/chocolateplatform.png"
+	},
+	{
+		"name": "gg",
+		"logo": "res://assets/images/logos/partners/gg.png"
+	},
+	{
+		"name": "google-ad-mob",
+		"logo": "res://assets/images/logos/partners/google-ad-mob.png"
+	},
+	{
+		"name": "index",
+		"logo": "res://assets/images/logos/partners/index.png"
+	},
+	{
+		"name": "inmobi",
+		"logo": "res://assets/images/logos/partners/inmobi.png"
+	},
+	{
+		"name": "liftoff",
+		"logo": "res://assets/images/logos/partners/liftoff.png"
+	},
+	{
+		"name": "pangle",
+		"logo": "res://assets/images/logos/partners/pangle.png"
+	},
+	{
+		"name": "smaato",
+		"logo": "res://assets/images/logos/partners/smaato.png"
+	},
+	{
+		"name": "unity",
+		"logo": "res://assets/images/logos/partners/unity.png"
+	}
+]
