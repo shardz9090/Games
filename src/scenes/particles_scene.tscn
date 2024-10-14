@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/scripts/particles_scene_script.gd" type="Script" id=1]
+[ext_resource path="res://assets/spritesheet/spritesheet.png" type="Texture" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=2]
+particles_animation = true
+particles_anim_h_frames = 14
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.33, 0.66, 1 )
+colors = PoolColorArray( 1, 1, 0.0156863, 1, 0.537255, 0.164706, 0.721569, 1, 0.917647, 0.298039, 0.537255, 1, 0.290196, 0.94902, 0.992157, 1 )
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+material = SubResource( 2 )
+emitting = false
+amount = 100
+lifetime = 6.82
+explosiveness = 1.0
+randomness = 1.0
+texture = ExtResource( 2 )
+direction = Vector2( 30, -40 )
+spread = 15.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 140.0
+initial_velocity_random = 0.5
+angular_velocity = 111.07
+angular_velocity_random = 1.0
+damping = 17.43
+angle = 80.0
+angle_random = 0.63
+scale_amount = 0.02
+scale_amount_random = 0.05
+color_initial_ramp = SubResource( 1 )
+anim_speed = 20.0
+anim_speed_random = 0.5
+script = ExtResource( 1 )

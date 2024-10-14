@@ -1,0 +1,19 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/17-67.png-00d0f0062d83908569bdd6ce2b4062b8.res"
+group_file="res://assets/atlas/spriteatlas.png"
+valid=true
+[deps]
+
+
+source_file="res://assets/sprites/17-67.png"
+dest_files=[ "res://.import/17-67.png-00d0f0062d83908569bdd6ce2b4062b8.res" ]
+
+[params]
+
+atlas_file="res://assets/atlas/spriteatlas.png"
+import_mode=0
+crop_to_region=false
+trim_alpha_border_from_region=true

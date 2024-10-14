@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/scenes/button_margin_container.tscn" type="PackedScene" id=1]
+
+[node name="Control" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 226.0
+margin_top = 284.0
+margin_right = 798.0
+margin_bottom = 315.0
+custom_constants/separation = 100
+
+[node name="ButtonContainer" parent="HBoxContainer" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 124.0
+margin_bottom = 31.0
+
+[node name="ButtonContainer2" parent="HBoxContainer" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 224.0
+margin_top = 0.0
+margin_right = 348.0
+margin_bottom = 31.0
+
+[node name="ButtonContainer3" parent="HBoxContainer" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 448.0
+margin_top = 0.0
+margin_right = 572.0
+margin_bottom = 31.0
